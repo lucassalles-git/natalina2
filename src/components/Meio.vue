@@ -1,5 +1,6 @@
 <script setup>
 import presentes from "../assets/presentes.png"
+import Fim from "./Fim.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import presentes from "../assets/presentes.png"
             </div>
             <img :src="presentes" alt="">
         </section>
+        <Fim/>
     </main>
 </template>
 
@@ -30,7 +32,6 @@ main {
 }
 
 .tempo-limitado {
-    border: solid;
     padding: 80px 0;
     display: flex;
     flex-direction: column;
