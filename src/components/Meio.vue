@@ -12,6 +12,9 @@ import Fim from "./Fim.vue";
                 <p>Nessas festas de fim de ano mande um presente para a pessoa amada e compartilhe a alegria do Natal.
                 </p>
             </div>
+
+            <p class="contador">10d -24h - 01m  - 52s</p>
+
             <img :src="presentes" alt="">
         </section>
         <Fim/>
@@ -40,6 +43,10 @@ main {
 
     div{
         width: 477px;
+    }
+
+    .contador{
+        @include font-style($size: 64px, $lineHeight: 69.63px, $color: #CD3C32);
     }
 
     h2 {

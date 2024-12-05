@@ -75,13 +75,20 @@ $background-color3: #F9F9F9;
         width: 238px;
         padding: 14px 32px;
 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
         border: none;
         border-radius: 4px;
         background-color: $main-color;
+        transition: all 0.5s;
 
-        @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px);
+        @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px, $color: #FFFFFF);
 
-        color: #FFFFFF;
+        
+    }
+
+    button:hover{
+        transition: all 0.5s;
+        background-color: #2B5E57;
     }
 }
 </style>

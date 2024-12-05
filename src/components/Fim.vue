@@ -47,13 +47,18 @@ import bola from "../assets/bola.png"
         width: 238px;
         padding: 14px 32px;
 
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
         border: none;
         border-radius: 4px;
         background-color: #CD3C32;
+        transition: all 0.5s;
 
-        @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px);
+        @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px, $color: #FFFFFF);
+    }
 
-        color: #FFFFFF;
+    button:hover{
+        transition: all 0.5s;
+        background-color: #C4A16A;
     }
 }
 
