@@ -8,7 +8,7 @@ import loja from "../assets/loja.png"
     <!-- insira as tags -->
     <section class="top">
         <div class="feliz-natal">
-            <img :src="palhaco" alt="">
+            <img class="logo" :src="palhaco" alt="">
 
             <h1>Uma <span>plataforma de doação</span> para espalhar alegria</h1>
 
@@ -49,18 +49,46 @@ $background-color3: #F9F9F9;
 
     background-color: $background-color1;
 
+    @media (max-width: 440px) and (max-height: 956px) {
+        height: auto;
+        padding: 96px 24px;
+        flex-direction: column;
+        gap: 64px;
+        text-align: center;
+    }
+
     .feliz-natal {
         height: 351px;
-        width: 590px;
+        width: 570px;
         display: flex;
         flex-direction: column;
         align-items: baseline;
         justify-content: space-between;
 
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .logo {
+            @media (max-width: 440px) and (max-height: 956px) {
+                width: 160px;
+                height: 38px;
+            }
+        }
+
     }
 
     h1 {
-        @include font-style()
+        @include font-style();
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 32px, $lineHeight: 38.4px);
+
+            width: 240px;
+        }
     }
 
     span {
@@ -69,6 +97,12 @@ $background-color3: #F9F9F9;
 
     p {
         @include font-style($weight: 400, $size: 24px, $lineHeight: 36px);
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 18px, $lineHeight: 27px);
+
+            width: 86vw;
+        }
     }
 
     button {
@@ -83,12 +117,23 @@ $background-color3: #F9F9F9;
 
         @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px, $color: #FFFFFF);
 
-        
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 100%;
+            padding: 16px 32px;
+        }
+
     }
 
-    button:hover{
+    button:hover {
         transition: all 0.5s;
         background-color: #2B5E57;
+    }
+
+    img {
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 326px;
+            height: 221.03px;
+        }
     }
 }
 </style>

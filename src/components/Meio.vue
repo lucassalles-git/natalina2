@@ -13,11 +13,11 @@ import Fim from "./Fim.vue";
                 </p>
             </div>
 
-            <p class="contador">10d -24h - 01m  - 52s</p>
+            <p class="contador">10d -24h - 01m - 52s</p>
 
-            <img :src="presentes" alt="">
+            <img class="presente" :src="presentes" alt="">
         </section>
-        <Fim/>
+        <Fim />
     </main>
 </template>
 
@@ -32,6 +32,10 @@ import Fim from "./Fim.vue";
 
 main {
     padding: 0 352px;
+
+    @media (max-width: 440px) and (max-height: 956px) {
+        padding: 8px 0;
+    }
 }
 
 .tempo-limitado {
@@ -41,23 +45,59 @@ main {
     align-items: center;
     gap: 40px;
 
-    div{
-        width: 477px;
+    @media (max-width: 440px) and (max-height: 956px) {
+        padding: 80px 24px;
+        align-items: center;
+        gap: 24px;
     }
 
-    .contador{
-        @include font-style($size: 64px, $lineHeight: 69.63px, $color: #CD3C32);
+    div {
+        width: 477px;
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     h2 {
         margin-bottom: 24px;
         @include font-style($lineHeight: 43.52px);
         text-align: center;
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 32px, $lineHeight: 34.82px);
+        }
     }
 
     p {
         @include font-style($weight: 400, $size: 20px, $lineHeight: 30px);
         text-align: center;
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 18px, $lineHeight: 27px);
+            width: 87vw;
+        }
+    }
+
+    .contador {
+        @include font-style($size: 64px, $lineHeight: 69.63px, $color: #CD3C32);
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 32px, $lineHeight: 34.82px, $color: #CD3C32);
+
+            width: 95vw;
+        }
+
+    }
+
+    .presente {
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 85vw;
+            height: 209.38px;
+        }
     }
 }
 </style>
