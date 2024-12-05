@@ -4,7 +4,7 @@ import bola from "../assets/bola.png"
 
 <template>
     <section class="bola-natal">
-        <img :src="bola" alt="">
+        <img class="ball" :src="bola" alt="Mãos segurando uma bola de natal">
 
         <div>
             <h2>Conectando generosidade
@@ -14,7 +14,7 @@ import bola from "../assets/bola.png"
                 significativos para aqueles que mais precisam. Faça parte do movimento e compartilhe o verdadeiro
                 espírito da generosidade.</p>
 
-                <button>Fazer uma doação</button>
+            <button>Fazer uma doação</button>
         </div>
     </section>
 </template>
@@ -28,22 +28,47 @@ import bola from "../assets/bola.png"
     color: $color;
 }
 
-.bola-natal{
+.bola-natal {
     padding: 80px 0;
     display: flex;
     gap: 206px;
 
-    h2{
+    @media (max-width: 440px) and (max-height: 956px) {
+        padding: 80px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+
+        text-align: center;
+    }
+
+    .ball {
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 213.94px;
+            height: 206.6px;
+        }
+    }
+
+    h2 {
         margin-bottom: 24px;
-        @include font-style()
+        @include font-style();
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 32px, $lineHeight: 38.4px);
+
+        }
     }
 
-    p{
+    p {
         margin-bottom: 40px;
-        @include font-style($weight: 400, $size: 24px, $lineHeight: 36px) 
+        @include font-style($weight: 400, $size: 24px, $lineHeight: 36px);
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            @include font-style($size: 18px, $lineHeight: 27px);
+        }
     }
 
-    button{
+    button {
         width: 238px;
         padding: 14px 32px;
 
@@ -54,12 +79,16 @@ import bola from "../assets/bola.png"
         transition: all 0.5s;
 
         @include font-style($font: "Roboto", $weight: 700, $size: 18px, $lineHeight: 21.09px, $color: #FFFFFF);
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 100%;
+            padding: 16px 32px;
+        }
     }
 
-    button:hover{
+    button:hover {
         transition: all 0.5s;
         background-color: #C4A16A;
     }
 }
-
 </style>
