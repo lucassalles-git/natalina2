@@ -7,11 +7,10 @@ import Footer from './components/Footer.vue';
 
 <template>
   <!-- tags ou componentes -->
-   <Inicio/>
-   <Meio/>
-   <Footer/>
+  <Inicio />
+  <Meio />
+  <Footer />
 
 </template>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

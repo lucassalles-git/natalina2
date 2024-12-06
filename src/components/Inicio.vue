@@ -57,6 +57,14 @@ $background-color3: #F9F9F9;
         text-align: center;
     }
 
+    @media (max-width: 884px) and (max-height: 1280px) {
+        height: auto;
+        padding: 96px 24px;
+        flex-direction: column;
+        gap: 126px;
+        text-align: center;
+    }
+
     .feliz-natal {
         height: 351px;
         width: 570px;
@@ -70,6 +78,10 @@ $background-color3: #F9F9F9;
             align-items: center;
             justify-content: center;
             gap: 30px;
+        }
+
+        @media (max-width: 884px) and (max-height: 1280px) {
+            align-items: center;
         }
 
         .logo {

@@ -8,7 +8,7 @@ import bola from "../assets/bola.png"
 
         <div>
             <h2>Conectando generosidade
-                ao redor do mundos</h2>
+                ao redor do mundo</h2>
 
             <p>Celebre a magia do Natal de uma maneira especial! Descubra a plataforma que permite a doação de presentes
                 significativos para aqueles que mais precisam. Faça parte do movimento e compartilhe o verdadeiro
@@ -42,10 +42,33 @@ import bola from "../assets/bola.png"
         text-align: center;
     }
 
+    @media (min-width: 768px) and (max-width: 884px) and (max-height: 1280px) {
+        padding: 80px 83px;
+        width: 100vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+
+        text-align: center;
+    }
+
     .ball {
         @media (max-width: 440px) and (max-height: 956px) {
             width: 213.94px;
             height: 206.6px;
+        }
+    }
+
+    div {
+
+        @media (max-width: 440px) and (max-height: 956px) {
+            width: 100%;
+        }
+
+        @media (max-width: 884px) and (max-height: 1280px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -56,6 +79,10 @@ import bola from "../assets/bola.png"
         @media (max-width: 440px) and (max-height: 956px) {
             @include font-style($size: 32px, $lineHeight: 38.4px);
 
+        }
+
+        @media (max-width: 884px) and (max-height: 1280px) {
+            width: 64vw;
         }
     }
 

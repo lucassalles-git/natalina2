@@ -36,6 +36,11 @@ main {
     @media (max-width: 440px) and (max-height: 956px) {
         padding: 8px 0;
     }
+
+    @media (max-width: 884px) and (max-height: 1280px) {
+        padding: 0;
+    }
+
 }
 
 .tempo-limitado {
@@ -89,6 +94,10 @@ main {
             @include font-style($size: 32px, $lineHeight: 34.82px, $color: #CD3C32);
 
             width: 95vw;
+        }
+
+        @media (max-width: 884px) and (max-height: 1280px) {
+            width: 77vw;
         }
 
     }

@@ -38,6 +38,15 @@ footer {
         justify-content: center;
         gap: 32px;
     }
+
+    @media (max-width: 884px) and (max-height: 1280px) {
+        height: 222px;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
 }
 
 .social {
