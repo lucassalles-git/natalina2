@@ -1,6 +1,7 @@
 <script setup>
 import presentes from "../assets/presentes.png"
 import Fim from "./Fim.vue";
+import Contador from "./Contador.vue";
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import Fim from "./Fim.vue";
                 </p>
             </div>
 
-            <p class="contador">10d -24h - 01m - 52s</p>
+            <p class="contador"><Contador/></p>
 
             <img class="presente" :src="presentes" alt="">
         </section>
